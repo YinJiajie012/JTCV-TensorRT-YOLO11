@@ -15,7 +15,7 @@ set(CMAKE_BUILD_TYPE Debug)
 option(CUDA_USE_STATIC_CUDA_RUNTIME OFF)
 
 set(THREADS_PREFER_PTHREAD_FLAG ON)
-find_package(Threads)
+# find_package(Threads)
 
 # 配置 CUDA
 # 显式指定 CUDA 11.8 的路径
@@ -69,4 +69,4 @@ add_library(yolo11 SHARED
 target_link_libraries(yolo11 "nvinfer" "nvinfer_plugin" "nvonnxparser")
 target_link_libraries(yolo11 ${OpenCV_LIBS})
 target_link_libraries(yolo11 ${CUDA_LIBRARIES})
-target_link_libraries(yolo11 Threads::Threads)
+# target_link_libraries(yolo11 Threads::Threads)
