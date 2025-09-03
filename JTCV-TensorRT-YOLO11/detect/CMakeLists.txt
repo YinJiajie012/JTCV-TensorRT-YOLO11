@@ -14,7 +14,7 @@ set(CMAKE_BUILD_TYPE Debug)
 
 option(CUDA_USE_STATIC_CUDA_RUNTIME OFF)
 
-set(THREADS_PREFER_PTHREAD_FLAG ON)
+# set(THREADS_PREFER_PTHREAD_FLAG ON)
 # find_package(Threads)
 
 # 配置 CUDA
@@ -33,7 +33,7 @@ message(STATUS "    CUDA libraries: ${CUDA_LIBRARIES}")
 message(STATUS "    CUDA include path: ${CUDA_INCLUDE_DIRS}")
 
 # 设置 CUDA 架构
-set(CMAKE_CUDA_ARCHITECTURES 75 89)
+# set(CMAKE_CUDA_ARCHITECTURES 75 89)
 set(CMAKE_CUDA_FLAGS "${CMAKE_CUDA_FLAGS} -std=c++11 -g -G")
 
 # 设置 include 路径
